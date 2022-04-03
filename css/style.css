@@ -19,7 +19,7 @@ html {
 .pTela{
     width: 100%;
     height: 100%;
-    transform: rotate3d(1, 1, 1, 322deg);
+    /* transform: rotate3d(1, 1, 1, 322deg); */
 }
 
 .base-tela{
@@ -37,8 +37,8 @@ html {
     background-color: rgb(241, 241, 241);
     border: 1px solid #ccc;
     height: 100%;
+    padding: 71px 8px;
     border-radius: 10px;
-    padding: 90px 15px;
     position: relative;
 }
 
@@ -76,13 +76,19 @@ html {
     float: left;
 }
 
+#chat-all{
+    overflow-y: scroll;
+    height: 100%;
+}
+
 .atendimento-cliente{
     height: auto;
     position: relative;
     padding: 6px;
-    min-width: 180px;
+    min-width: auto;
+    max-width: 350px;
     background-color: #fff;
-    margin: 22px 0px;
+    margin: 25px 10px 10px 100%;
     display: flex;
     align-items: center;
     color: #d37f00;
@@ -97,6 +103,9 @@ html {
 {
     font-size: 18px;
     margin: 0;
+    max-width: 250px;
+    overflow-wrap: break-word;
+    height: auto;
 }
 
 .atendente{
@@ -104,12 +113,14 @@ html {
     top: -25px;
     left: 0px;
     color: #d37f00;
+    min-width: 95px;
 }
 
 .cliente{
     position: absolute;
     top: -25px;
     right: 0px;
+    min-width: 95px;
 }
 
 .atendimento .cliente,
@@ -152,3 +163,19 @@ input:focus-visible{
     border-bottom: 1px solid #d37f00;
     outline: none !important;
 }
+
+#chat-all::-webkit-scrollbar {
+    width: 3px;               /* width of the entire scrollbar */
+  }
+  
+
+#chat-all::-webkit-scrollbar-track {
+    background: rgb(241, 241, 241)       /* color of the tracking area */
+  }
+  
+
+#chat-all::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid orange;  /* creates padding around scroll thumb */
+  }
